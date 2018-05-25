@@ -1,0 +1,46 @@
+{
+  "name": "transformers-app",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "json-server --watch src/transformers-api/db.json",
+    "webpack": "webpack",
+    "postinstall": "gulp"
+  },
+  "author": "IM",
+  "license": "ISC",
+  "dependencies": {
+    "ajv": "^6.5.0",
+    "css-loader": "^0.28.11",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-stylus": "^2.7.0",
+    "gulp-util": "^3.0.8",
+    "gulp-zip": "^4.1.0",
+    "history": "^4.7.2",
+    "json-server": "^0.11.2",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-router-redux": "^5.0.0-alpha.9",
+    "redux": "^4.0.0",
+    "redux-persist": "^5.9.1",
+    "redux-promise-middleware": "^5.1.1",
+    "redux-thunk": "^2.2.0",
+    "style-loader": "^0.21.0",
+    "uuid": "^3.2.1",
+    "webpack": "^4.8.1"
+  },
+  "devDependencies": {
+    "webpack-cli": "^2.1.3",
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1"
+  }
+}

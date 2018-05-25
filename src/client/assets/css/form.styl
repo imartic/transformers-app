@@ -1,0 +1,105 @@
+form
+	label
+		display block
+		cursor pointer
+		color $off-gray
+	input
+		width 100%
+		background-color transparent
+	select
+		border-radius 0
+		border-bottom 1px solid var(--c-border, $black)
+		padding-left 12px
+		outline none !important
+		box-shadow none !important
+		cursor pointer
+	input
+	select
+		-webkit-appearance none
+		appearance none
+		&:focus
+			outline none !important
+			box-shadow none !important
+	.field
+		position relative
+		&.select
+			&:before
+			&:after
+				font-icon('f')
+				position absolute
+				pointer-events none
+			&:before
+				transform rotate(-90deg) translateX(1px)
+			&:after
+				transform rotate(90deg) translateX(1px)
+
+	input:not([type="checkbox"]):not([type="radio"]),
+	select
+		padding 8px
+		width 100%
+		background-color $bg-d
+		border-radius 5px
+		border $border
+		color $gray
+		transition border-color .2s ease
+		box-shadow $shadow-soft
+		&:focus
+			border-color $off-gray
+		&:disabled
+			color $off-gray
+			+ label
+				cursor initial
+				&:focus
+				&:active
+					color $off-gray
+		&:before
+		&:after
+			font-icon('f')
+			position absolute
+			pointer-events none
+		&:before
+			transform rotate(-90deg) translateX(3px)
+		&:after
+			transform rotate(90deg) translateX(3px)
+	input:not([type="checkbox"]):not([type="radio"]).icon-right
+		padding-right 32px
+	select
+		padding-right 32px
+	input:focus + label,
+	select:focus + label,
+	label:active
+		color $green
+	.field
+		display flex
+		flex-wrap wrap
+		input,
+		select
+			order 2
+		label
+			order 1
+			transition color .12s ease
+		&:not(.checkbox):not(.radio)
+			label
+				margin-bottom 3px
+		.icon-btn
+			position absolute
+			top calc(50% + 12px) // .5 * label@height
+			right 6px
+			transform translateY(-50%)
+			color $off-gray
+			font-size 12px
+			&:active
+				color $white
+	.field.select
+		&:before
+		&:after
+			right 10px
+			color $off-gray
+			font-size 8px
+		&:before
+			bottom 16px
+		&:after
+			bottom 8px
+	.required:after
+		 color $red
+		 content " *"
